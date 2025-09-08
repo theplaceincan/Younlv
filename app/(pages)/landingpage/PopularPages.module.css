@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 25;
+  color: var(--text-1);
+}
+
+/* Pages section
+***********************/
+

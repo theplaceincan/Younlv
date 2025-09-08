@@ -1,0 +1,26 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.navbar-title-img {
+  max-width: 90;
+}
+
+.toggleTheme-btn {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-1);
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.toggleTheme-btn:hover {
+  background-color: var(--bg-2);
+}
