@@ -27,7 +27,7 @@ export default function Hero() {
     "Insert cool search term.",
     "Dig it up, detective!",
   ];
-  let seenIndex = -1;
+  const seenIndex = -1;
   function getRandomInputPlaceholder() {
     let randomIndex = -1;
     do {
