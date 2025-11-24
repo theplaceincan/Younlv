@@ -4,7 +4,7 @@
   border-bottom: 1px solid var(--border-2);
   display: flex;
   justify-content: center;
-  gap: 10;
+  gap: 10px;
 }
 
 .calc-container {
@@ -12,6 +12,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 0 16px;
+  max-width: 100%;
 }
 
 /* Mode btn
@@ -97,13 +99,6 @@
   background-color: var(--bg-3);
 }
 
-.json-controls {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  gap: 10;
-}
-
 .courses-list {
   display: flex;
   flex-direction: column;
@@ -120,11 +115,27 @@
   color: var(--unlvRed-1);
 }
 
+.json-controls {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .course-row {
   display: flex;
-  gap: 5;
+  gap: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
+  flex-wrap: wrap;
+}
+
+.course-row input,
+.course-row select {
+  flex: 1;
+  min-width: 120px;
+  font-size: 16px;
 }
 
 .select {
