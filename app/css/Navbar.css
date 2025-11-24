@@ -2,6 +2,14 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  background-color: var(--bg-0);
+  border-bottom: 1px solid var(--border-2);
+}
+
+.navbar-logo-text {
+  font-weight: bold;
+  font-size: 25px;
+  color: var(--unlvRed-0);
 }
 
 .navbar-title-img {
@@ -12,6 +20,7 @@
   cursor: pointer;
   height: 40px;
   width: 40px;
+  padding: 10px;
   border-radius: 50%;
   display: flex;
   align-items: center;

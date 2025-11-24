@@ -1,4 +1,4 @@
-import css from "./PopularPages.module.css"
+import css from "./popularpages.module.css"
 
 export default function PopularPages() {
   return (

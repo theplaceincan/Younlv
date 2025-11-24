@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import { toggleTheme } from "../utils/toggleTheme";
-import "../css/Navbar.css"
+import "../css/navbar.css"
 
 export default function Navbar() {
 
@@ -17,11 +17,12 @@ export default function Navbar() {
   return (
     <div className="navbar-container">
       <a href={"/"} className="navbar-title-img">
-        {theme == "light" ? (
+        {/* {theme == "light" ? (
           <img src="/darklogo.png" alt="Dark Logo" />
         ) : (
           <img src="/lightlogo.png" alt="Dark Logo" />
-        )}
+        )} */}
+        <p className="navbar-logo-text">YOU&LV</p>
       </a>
       <button className="toggleTheme-btn" onClick={() => handleNavThemeVal()}>
         {theme == "light" ? (

@@ -1,0 +1,143 @@
+.mode-selection-container {
+  padding: 10px;
+  background-color: var(--bg-0);
+  border-bottom: 1px solid var(--border-2);
+  display: flex;
+  justify-content: center;
+  gap: 10;
+}
+
+.calc-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Mode btn
+*************************/
+
+.mode-btn {
+  cursor: pointer;
+  background-color: var(--bg-0);
+  color: var(--text-1);
+  transition: background-color 0.2s ease, border 0.2s ease;
+}
+
+.mode-btn:hover {
+  background-color: var(--bg-3);
+}
+
+.active-mode {
+  background-color: var(--unlvRed-3);
+  color: var(--unlvRed-0);
+}
+
+.active-mode:hover {
+  background-color: var(--unlvRed-4);
+}
+
+.active-mode:active {
+  background-color: var(--unlvRed-3);
+}
+
+.mode-btn:active {
+  background-color: var(--bg-2);
+}
+
+/* Texts
+*************************/
+
+.page-title {
+  font-weight: 600;
+  text-align: center;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.result {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.gpa-display {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.add-btn {
+  background-color: var(--unlvRed-0);
+  color: white;
+  transition: all 0.2s ease;
+}
+.add-btn:hover {
+  background-color: var(--unlvRed-1);
+}
+
+.download-btn {
+  color: var(--text-1);
+  background-color: var(--bg-2);
+}
+.download-btn:hover {
+  background-color: var(--bg-3);
+}
+
+.upload-btn {
+  color: var(--text-1);
+  background-color: var(--bg-2);
+}
+.upload-btn:hover {
+  background-color: var(--bg-3);
+}
+
+.json-controls {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10;
+}
+
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delete-btn {
+  color: var(--unlvRed-0);
+  transition: all 0.2s ease;
+  padding: 0px;
+  margin-left: 10px;
+}
+.delete-btn:hover {
+  color: var(--unlvRed-1);
+}
+
+.course-row {
+  display: flex;
+  gap: 5;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.select {
+  outline: none;
+  padding: 5px;
+  background-color: var(--bg-0);
+  border: 1px solid var(--border-1);
+  border-radius: 8px;
+  padding: 5px 5px 5px 10px;
+  color: var(--text-2);
+  transition: all 0.2s ease;
+}
+
+select:hover {
+  border: 1px solid var(--unlvRed-1);
+}

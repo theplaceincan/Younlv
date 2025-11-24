@@ -1,57 +1,72 @@
-import css from "./Hero.module.css"
+'use client';
+
+import css from "./hero.module.css"
 import { useEffect, useRef } from "react";
+import Link from 'next/link';
 
-export default function Hero() {
-
-  // --------- Easter egg input placeholder functionality
-  const easterEggInputPlaceHolders = [
-    "What are you looking for?",
-    "Wacha lookin 4 2day buddy o'pal?",
-    "What's on the agenda, champ?",
-    "What can I help ya dig up today?",
-    "What's cookin', good lookin'?",
-    "Initiating search protocol…",
-    "Ctrl+F vibes only.",
-    "Query the archives…",
-    "Lost? Type something!",
-    "Searching… for meaning in life?",
-    "Treasure map goes here →",
-    "Lay it on me, partner.",
-    "Your wish is my search!",
-    "Tell me your secrets…",
-    "Finders keepers…",
-    "Summon the knowledge, wizard!",
-    "¿Qué tienes en mente, amigo?",
-    "Looking for something shiny?",
-    "Engage curiosity engines!",
-    "Insert cool search term.",
-    "Dig it up, detective!",
-  ];
-  const seenIndex = -1;
-  function getRandomInputPlaceholder() {
-    let randomIndex = -1;
-    do {
-      randomIndex = Math.floor(Math.random() * easterEggInputPlaceHolders.length);
-    } while (randomIndex === seenIndex && easterEggInputPlaceHolders.length > 1);
-
-    return easterEggInputPlaceHolders[randomIndex];
+const tools = [
+  {
+    title: 'Course Planner',
+    description: 'Build your semester schedule',
+    link: '/course',
+    registration: true,
+  },
+  {
+    title: 'Textbook Search',
+    description: 'Find free textbook PDFs',
+    link: '/textbook'
+  },
+  {
+    title: 'Grade Calculator',
+    description: 'Calculate GPA or what you need on finals',
+    link: '/calculator'
+  },
+  {
+    title: 'QR Code Generator',
+    description: 'QR code generator for RSO\'s',
+    link: '/qr'
   }
-  const inputRef = useRef<HTMLInputElement>(null);
-  useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.placeholder = getRandomInputPlaceholder();
-    }
-  }, []);
+];
+
+// const recentTools = [
+//   // {
+//   //   title: 'Course Planner',
+//   //   description: 'Build your semester schedule',
+//   //   link: '/course'
+//   // },
+// ];
+export default function Hero() {
 
   return (
     <div className={css["container"]}>
-      <div className={css["hero-text-container"]}>
-        <p className={css["hero-title"]}>You&LV.com</p>
-        <p className={css["hero-subtitle"]}>A free college resource hub</p>
+      <div className={css["tools-container"]}>
+        <p className={css["tools-container-title"]}>Tools</p>
+        <div className={css["tool-cards-container"]}>
+          {tools.map((tool) => (
+            <Link key={tool.link} href={tool.link} className={css["tool-card"]}>
+              <p className={css["tool-name"]}>{tool.title}</p>
+              <p className={css["tool-desc"]}>{tool.description}</p>
+              { tool.registration && (
+                <p className={css["tool-warning"]}>Sign-in Required</p>
+              )}
+            </Link>
+          ))}
+        </div>
       </div>
-      <div className={css["search-container"]}>
-        <input ref={inputRef} className={css["search"]} />
-      </div>
+      <div className="p-5"></div>
+      {/* {recentTools && recentTools.length > 0 && (
+        <div className={css["tools-container"]}>
+          <p className={css["tools-container-title"]}>Recent Tools</p>
+          <div className={css["tool-cards-container"]}>
+            {recentTools.map((tool) => (
+              <Link key={tool.link} href={tool.link} className={css["tool-card"]}>
+                <p className={css["tool-name"]}>{tool.title}</p>
+                <p className={css["tool-desc"]}>{tool.description}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )} */}
     </div>
   )
 }
