@@ -1,7 +1,7 @@
 'use client';
 
 import css from "./hero.module.css"
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
 import Link from 'next/link';
 
 const tools = [
