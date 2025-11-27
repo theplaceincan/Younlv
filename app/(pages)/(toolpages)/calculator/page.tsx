@@ -120,11 +120,25 @@ function GPACalculator() {
     let totalCredits = 0;
 
     courses.forEach(course => {
-      if (course.grade && course.credits) {
-        totalPoints += gradePoints[course.grade as keyof typeof gradePoints] * course.credits;
-        totalCredits += course.credits;
-      }
-    });
+    const gp = gradePoints[course.grade as keyof typeof gradePoints];
+    const credits = Number(course.credits);
+
+    if (
+      gp === undefined ||
+      course.grade === "S" ||
+      course.grade === "U" ||
+      course.grade === "S/U" ||
+      course.grade === "P" ||
+      course.grade === "IP" ||
+      course.grade === "W"
+    ) {
+      return;
+    }
+
+    totalPoints += gp * credits;
+    totalCredits += credits;
+  });
+
 
     return totalCredits > 0 ? (totalPoints / totalCredits).toFixed(3) : '0.000';
   };
