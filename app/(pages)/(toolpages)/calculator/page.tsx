@@ -43,7 +43,7 @@ function ExamsCalculator() {
 
   return (
     <div className={css["calc-container"]}>
-      <p className={css["page-title"]}>Calculate What's Needed On Your Exam</p>
+      <p className={css["page-title"]}>Calculate What&apos;s Needed On Your Exam</p>
 
       <div className={css["input"]}>
         <label>Current Grade (%)</label>
